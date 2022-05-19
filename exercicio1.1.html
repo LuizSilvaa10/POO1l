@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1.1</title>
+</head>
+
+<body>
+
+    
+   
+    <script>
+        // Cria classe
+        class Frutas {
+
+            // Atributos
+            #nome;
+            #sabor;
+            #cor;
+
+            // Métodos 'set' (setters)
+            setNome(nome) {
+                // Remove espaços antes e depois de 'nome'
+                nome = nome.trim();
+
+                // Atribui 'nome' ao atributo '#nome'
+                this.#nome = nome;
+            }
+
+            setSabor(sabor) {
+
+                // A mesma sequencia de 'setNome()'
+                // Remove espaços extra de 'sabor' e atribui a '#sabor'
+                this.#sabor = sabor.trim();
+            }
+
+            setCor(cor) {
+                this.#cor = cor.trim();
+            }
+
+            // Atributos 'get' (getters)
+            getNome() {
+                return this.#nome;
+            }
+
+            getSabor() {
+                return this.#sabor;
+            }
+
+            getCor() {
+                return this.#cor;
+            }
+
+        }
+
+        // Instância da classe
+        var banana = new Frutas();
+        var uva = new Frutas();
+
+        // Define atributos dos objetos
+        banana.setNome('da terra');
+        banana.setSabor('docinha');
+        banana.setCor('Amarela');
+
+        uva.setNome('itália');
+        uva.setSabor('Salgada');
+        uva.setCor('roxa');
+
+        // Exibe o objeto inteiro
+        console.log(banana);
+
+        // Exibe no documento
+        document.write(`
+        
+        <p>A banana ${banana.getNome()} é ${banana.getSabor()} e ${banana.getCor()}.</p>
+        <p>A uva ${uva.getNome()} é ${uva.getSabor()} e tem cor ${uva.getCor()}.</p>
+        
+        `);
+
+    </script>
+
+</body>
+
+</html>

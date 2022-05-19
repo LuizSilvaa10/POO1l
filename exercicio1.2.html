@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: monospace;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            margin: 0;
+            padding: .5rem;
+        }
+    </style>
+    <title>Exercício 1.2</title>
+</head>
+
+<body>
+
+    <h1>Exercício 1.2</h1>
+    <p>Observe o diagrama de classes abaixo e reproduza-o usando JavaScript:</p>
+
+    <table>
+        <tr>
+            
+        </tr>
+        <tr>
+            
+        </tr>
+        <tr>
+            
+        </tr>
+    </table>
+
+    <p>Projetin Carro.</p>
+
+    <script>
+
+        // Cria classe 'Carro'
+        class Carro {
+
+            // Atributos
+            #marca
+            #modelo
+            #cor
+            #ano
+
+            // Setters
+            setMarca(marca) {
+                // Faço sanitizações, validações, etc...
+
+                // Atribuição
+                this.#marca = marca;
+            }
+            setModelo(modelo) {
+
+                // Faço sanitizações, validações, etc...
+
+                // Atribuição
+                this.#modelo = modelo;
+            }
+            setCor(cor) {
+                // Faço sanitizações, validações, etc...
+
+                // Atribuição
+                this.#cor = cor;
+            }
+            setAno(ano) {
+                // Faço sanitizações, validações, etc...
+
+                // Atribuição
+                this.#ano = ano;
+            }
+
+            // Getters
+            getMarca() {
+                return this.#marca
+             }
+            getModelo() {
+                return this.#modelo
+             }
+            getCor() { 
+                return this.#cor
+            }
+            getAno() {
+                return this.#ano
+             }
+
+        }
+
+        // Instância
+        let Bugatti = new Carro();
+
+        // Define atributos
+        Bugatti.setMarca('Bugatti');
+        Bugatti.setModelo('2020');
+        Bugatti.setCor('azul');
+        Bugatti.setAno('2021');
+
+        // Exibe objeto no console
+        console.log('Bugatti: ', Bugatti);
+
+        // Exibe objeto no documento
+        document.write(`
+            <p>Bugatti:</p>
+            <ul>
+                <li>Marca: ${Bugatti.getMarca()}</li>
+                <li>Modelo: ${Bugatti.getModelo()}</li>
+                <li>Cor: ${Bugatti.getCor()}</li>
+                <li>Ano de fabricação: ${Bugatti.getAno()}</li>
+            </ul>
+        `);
+
+    </script>
+
+</body>
+
+</html>
